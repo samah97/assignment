@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  account-service:
+    build: account_service/
+    container_name: account-service
+    #   works in version 2
+    #   depends_on:
+    #     foobsp-mysql:
+    #       condition: service_healthy
+    environment:
+            - TRANSACTIONS_ENDPOINT=http://transaction-service:8083 
+    ports:
+      - 8080:8080
+    networks:
+           - services-network
+      
+  transaction-service:
+    build: transaction_service/
+    container_name: transaction-service
+    ports:
+      - 8083:8083      
+    networks:
+            - services-network
+
+networks:
+        services-network:
+              
