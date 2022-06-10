@@ -1,0 +1,3 @@
+INSERT INTO customer(id,  name, sur_name, phone_number, email, status) VALUES (1, 'samah','daou','03123123','samahdaou97@gmail.com','ACTIVE');
+INSERT INTO customer(id,  name, sur_name, phone_number, email, status) VALUES (2, 'muhammad','javaid','03125125','muhammad.javaid@capgemini.com','ACTIVE');
+INSERT INTO customer(id,  name, sur_name, phone_number, email, status) VALUES(3, 'kalim','shaikh','03126126','kalim.shaikh@capgemini.com','ACTIVE');
