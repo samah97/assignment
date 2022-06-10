@@ -4,10 +4,6 @@ services:
   account-service:
     build: account_service/
     container_name: account-service
-    #   works in version 2
-    #   depends_on:
-    #     foobsp-mysql:
-    #       condition: service_healthy
     environment:
             - TRANSACTIONS_ENDPOINT=http://transaction-service:8083 
     ports:
